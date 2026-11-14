@@ -113,8 +113,7 @@ var bl=document.getElementById('balloons'),bc=['#ff6fb1','#ffd166','#a58bff','#4
 for(var k=0;k<14;k++){var d=document.createElement('div');d.className='b';d.style.left=(Math.random()*95)+'%';d.style.background=bc[k%6];d.style.animationDuration=(9+Math.random()*10)+'s';d.style.animationDelay=(-Math.random()*15)+'s';bl.appendChild(d)}
 document.getElementById('gift').onclick=function(){
 document.getElementById('intro').style.display='none';
-document.getElementById('card').style.display='block';
-burst();setTimeout(burst,500);type(wishes[0])};
+type(wishes[0]);show(true);setTimeout(burst,500)};
 document.getElementById('more').onclick=function(){i=(i+1)%wishes.length;type(wishes[i]);burst()};
 document.getElementById('boom').onclick=burst;
 
